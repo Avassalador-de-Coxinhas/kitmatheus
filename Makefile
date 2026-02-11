@@ -21,4 +21,4 @@ figuras/taxas_variacao.png: code/plota_dados.py results/variacao_temperature.csv
 	python code/plota_dados.py > figuras/taxas_variacao.png
 
 clean: 
-	rm -r data results
+	rm -r data results figuras
