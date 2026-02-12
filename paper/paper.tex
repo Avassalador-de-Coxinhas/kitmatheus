@@ -1,37 +1,64 @@
 %Aqui vai o comando para o tipo de documento e formatação para a  página
-\documentoclass[twocolumn,A4]{article}
+\documentclass[twocolumn,A4]{article}
 
 %pacotes a serem ustilizados (normalmente estão na maior parte dos documentos)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %para carecteres especiais 
-\usepackage [utf8]{inputtec}
-\usepackage [TU]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[TU]{fontenc}
 %Para definir a língua em que vamos escrever
-\userpackage[brazil]{babel}
+\usepackage[brazil]{babel}
 %Para gerar funções matemáticas 
-\userpackage{amsmath}
-\userpackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amssymb}
 %Para inserir as figuras
-\userpackage{graphicx}
+\usepackage{graphicx}
 %Para colocar links e metadados no PDF
-\userpackage{hyperref}
+\usepackage{hyperref}
 %Para formatação melhorada
-\userpackage{microtype}
+\usepackage{microtype}
 %Para as citações 
-\userpackage[round,authoryear,short]{natbib}
+\usepackage[round,authoryear,sort]{natbib}
 
 % Configurações do documento, formato e etc. Pacotes que importamos acima.
 % Configurar os metadados do nosso pdf
-\hyperssetup{
+\hypersetup{
 %Links coloridos ao invés da caixa colorida
 colorlinks,
 %Cor dos links
 allcolors=blue,
 %Titulo que aparece no metadados
-pdftitle={mudança na temperatura média nos países, nos últimos 5 anos},
+pdftitle={Mudança na temperatura média nos países, nos últimos 5 anos},
 %Author que aparece no metadados
-pdfauthor={Matheus Santos Rodrigues},
+pdfauthor={Matheus Santos Rodrigues, Arthur Siqueira-Macedo, Yago M. Castro},
 % permitir a quebra de linha no meio dos links
-breaklinkss=true,
+breaklinks=true,
 }
 
+% Vamos começar
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\title{Mudança na temperatura média nos países, nos últimos 5 anos.}
+\author{
+	Matheus Santos Rodrigues\textsuperscript{1,2},
+	Arthur Siqueira-Macedo\textsuperscript{1,2},
+	Yago M. Castro\textsuperscript{1,2}
+	\\[0.2cm]
+	{\small
+		\textsuperscript{1}Geofísica-IAG; 
+		\textsuperscript{2}Universidade de São Paulo, Brasil
+	}
+}
+
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+Analisando a série de dados históricos de temperatura de 225 países, foram observados
+que os países com menor variação de temperatura termiman
+todos com "ão"
+\end{abstract}  
+
+\end{document}
