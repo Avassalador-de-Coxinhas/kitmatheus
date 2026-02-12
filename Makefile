@@ -20,5 +20,8 @@ figuras/taxas_variacao.png: code/plota_dados.py results/variacao_temperature.csv
 	mkdir -p figuras
 	python code/plota_dados.py > figuras/taxas_variacao.png
 
+paper/paper.pdf: paper/paper.tex
+	tectonic -X compile paper/paper.tex
+
 clean: 
 	rm -r data results figuras
