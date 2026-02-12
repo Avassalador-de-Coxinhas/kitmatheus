@@ -1,9 +1,12 @@
 #alvo: dependencia1 dependencia2
 #	comando que gera o alvo a partir das dependencias
 
-.PHONY: clean all
+.PHONY: clean all show
 
-all: figuras/taxas_variacao.png
+all: paper/paper.pdf
+
+show: paper/paper.pdf
+	start paper/paper.pdf
 
 data/temperature-data.zip: code/baixar.py
 	python code/baixar.py
@@ -20,8 +23,8 @@ figuras/taxas_variacao.png: code/plota_dados.py results/variacao_temperature.csv
 	mkdir -p figuras
 	python code/plota_dados.py > figuras/taxas_variacao.png
 
-paper/paper.pdf: paper/paper.tex
+paper/paper.pdf: paper/paper.tex figuras/taxas_variacao.png
 	tectonic -X compile paper/paper.tex
 
-clean: 
-	rm -r data results figuras
+clean:
+	rm -r data results figuras paper/paper.pdf
