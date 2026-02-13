@@ -4,6 +4,7 @@ Código desevenvolvido durante o curso ["kit de sobrevivência digital"](https:/
 do IAG-USP.
 
 ##Licença
+
 Copirith 2026 Matheus Santos
 
 O conteúdo deste repositório está disponível sobre o termo da 
